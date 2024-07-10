@@ -27,6 +27,18 @@
 </template>
  
 <style>
+@keyframes scroll {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 10px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
 .hero{
     padding: 75px 0;
 }
@@ -64,6 +76,7 @@
     text-orientation: mixed;
     transform: rotate(180deg);
     padding-top: 50px;
+    animation: scroll 1.5s infinite ease-in-out;
 }
 
 .scroll_text{
@@ -224,7 +237,7 @@
         max-width: 380px;
     }
     .scroll-tag{
-        bottom: 18px;
+        transform: translateY(-18px) rotate(180deg);
     }
     .hero{
         padding: 65px 0;
