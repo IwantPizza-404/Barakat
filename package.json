@@ -1,0 +1,14 @@
+{
+  "name": "barakat",
+  "version": "1.0.0",
+  "scripts": {
+      "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+      "start-frontend": "cd frontend && npm i && npm run build",
+      "start-backend": "cd backend && npm i && npm start"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+      "concurrently": "^6.5.1"
+  }
+}

@@ -1,0 +1,73 @@
+@font-face{
+  font-family: Montserrat;
+  src: url(/src/assets/fonts/Montserrat.ttf);
+}
+@font-face{
+  font-family: Unbounded;
+  src: url(/src/assets/fonts/Unbounded.ttf);
+}
+
+:root {
+  --black: #000000;
+  --light-grey: #6F6F6F;
+  --white: #ffffff;
+}
+
+:root {
+  --bg-color: var(--white);
+  --text-size: 18px;
+  --text-color: var(--black);
+  --header-size: 48px;
+  --header-color: var(--black);
+  --non-active-color: var(--light-grey);
+  --grid-gap: 20px;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, button {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: Montserrat;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+b{
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}
