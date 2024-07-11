@@ -73,6 +73,9 @@
     top: auto;
     width: 160px;
 }
+.logo a{
+    display: flex;
+}
 .book-btn a{
     display: flex;
     align-items: center;
@@ -120,6 +123,12 @@
     }
 }
 @media screen and (max-width: 425px) {
-    
+    .book-btn svg{
+        width: 24px;
+        height: auto;
+    }
+    .logo{
+        width: 120px;
+    }
 }
 </style>

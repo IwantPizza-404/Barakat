@@ -30,6 +30,11 @@ body{
   background: var(--bg-color);
 }
 
+@media screen and (max-width: 1600px) {
+  .container{
+    max-width: 1100px;
+  }
+}
 @media screen and (max-width: 900px) {
   .container{
     padding: 0 20px;
