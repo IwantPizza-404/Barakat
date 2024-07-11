@@ -89,7 +89,7 @@ export default {
 </script>
 
 <template>
-  <div class="main-gallery">
+  <section class="main-gallery">
     <div class="container">
       <div class="mg-wrapp">
         <div class="mg-header">
@@ -137,7 +137,7 @@ export default {
         </swiper>
       </transition>
     </div>
-  </div>
+  </section>
 </template>
 
 

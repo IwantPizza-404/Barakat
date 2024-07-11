@@ -29,6 +29,9 @@
 body{
   background: var(--bg-color);
 }
+.lock{
+  overflow: hidden;
+}
 
 @media screen and (max-width: 1600px) {
   .container{

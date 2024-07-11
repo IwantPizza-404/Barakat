@@ -1,5 +1,27 @@
 <script>
   export default{
+    data(){
+      return{
+        nav_links:[
+          {title: 'Home', link: '#'},
+          {title: 'Rooms', link: '#'},
+          {title:'Foodcourt', link: '#'},
+          {title: 'Contacts', link: '#'},
+          {title: 'Location', link: '#'},
+        ],
+        NavShow: false,
+      }
+    },
+    methods:{
+      ToggleNav(){
+        this.NavShow =! this.NavShow
+        window.scrollTo(0,0)
+        if(this.NavShow == true)
+          document.body.classList.add('lock')
+        else
+          document.body.classList.remove('lock')
+      }
+    }
   }
 </script>
 
@@ -8,7 +30,14 @@
     <div class="container">
         <div class="content">
             <div class="left-pannel">
-                <div class="nav-btn">Menu</div>
+                <transition name="fade" mode="out-in">
+                    <div @click="ToggleNav()" class="nav-btn" v-if="NavShow">
+                        Close
+                    </div>
+                    <div @click="ToggleNav()" class="nav-btn" v-else>
+                        Menu
+                    </div>
+                </transition>
                 <ul class="lang-menu">
                     <li class="lang-option active">EN</li>
                     <li class="lang-option">GE</li>
@@ -30,20 +59,52 @@
             </div>
         </div>
     </div>
+    <div :class="{'header-drop': true, 'hd-open': NavShow}">
+        <div class="hd-wrapp">
+            <ul class="header-nav">
+                <li 
+                v-for="(link, index) in this.nav_links" 
+                class="hn_item"
+                :key="index"
+                >
+                    <span class="hn_item-tag">0{{index+1}}</span>
+                    <a class="hn_link" :href="link.link">
+                        {{link.title}}
+                    </a>
+                </li>
+            </ul>
+            <div class="hd_lang-menu">
+                <div class="hd_lm-title">Language:</div>
+                <ul class="hd_lm-list">
+                    <li class="hd_lm-option active">
+                        <a href="#">EN</a>
+                    </li>
+                    <li class="hd_lm-option">
+                        <a href="#">GE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
   </header>
 </template>
 
 <style scoped>
+header{
+    position: relative;
+    z-index: 1;
+}
 .content{
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
+    z-index: 1;
 }
 .left-pannel{
     display: flex;
-    gap: 60px;
+    gap: 50px;
 }
 .nav-btn{
     display: flex;
@@ -51,6 +112,7 @@
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
+    min-width: 6ch;
 }
 .lang-menu{
     display: flex;
@@ -87,6 +149,147 @@
 .book-btn{
     display: flex;
 }
+
+.header-drop{
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: all .1s cubic-bezier(.39,.575,.565,1);
+}
+.header-drop.hd-open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.hd-wrapp{
+    width: 100%;
+    height: 100%;
+    padding: 166px 50px 50px 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.header-drop::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    transition: all .5s ease-out;
+}
+.header-drop.hd-open::after{
+    height: 100%;
+}
+
+.header-nav{
+    display: block;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    -webkit-column-fill: balance;
+    -moz-column-fill: balance;
+    column-fill: balance;
+    max-width: 1100px;
+    min-height: 276px;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .5s cubic-bezier(.39,.575,.565,1);
+}
+.header-drop.hd-open .header-nav{
+    opacity: 1;
+    transition-delay: .4s;
+}
+.hn_item:nth-child(1),
+.hn_item:nth-child(4){
+    margin: 0 0 30px 0;
+}
+.hn_item{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+    margin: 30px 0;
+}
+.hn_link{
+    font-weight: 400;
+    font-size: 42px;
+    font-family: Unbounded;
+    line-height: 100%;
+    text-transform: uppercase;
+    padding-left: 50px;
+}
+.hn_item-tag{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    color: var(--non-active-color);
+}
+
+.hd_lang-menu{
+    display: none;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+    align-self: flex-start;
+    transition: opacity .4s cubic-bezier(.39,.575,.565,1);
+    opacity: 0;
+}
+.header-drop.hd-open .hd_lang-menu{
+    opacity: 1;
+    transition-delay: .5s;
+}
+.hd_lm-title{
+    font-size: 28px;
+    font-family: Unbounded;
+    text-transform: uppercase;
+}
+.hd_lm-list{
+    display: flex;
+    gap: 10px;
+}
+.hd_lm-option a{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--non-active-color);
+
+}
+.hd_lm-option.active a{
+    color: var(--text-color);
+}
+
+.fade-enter-active, .fade-leave-active{
+  transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+}
+
+@media screen and (max-width: 1600px) {
+    .header-nav{
+        max-width: 1000px;
+    }
+    .hd-wrapp{
+        padding: 156px 50px 50px 50px;
+    }
+}
+
 @media screen and (max-width: 1440px) {
     .nav-btn, .lang-option, .book-btn a{
         font-size: 19px;
@@ -99,12 +302,53 @@
         padding: 25px 0;
     }
 }
+@media screen and (max-width: 1024px) {
+    .header-nav{
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        min-height: 480px;
+    }
+    .hn_item:nth-child(4){
+        margin: 30px 0;
+    }
+}
 @media screen and (max-width: 900px) {
     .lang-menu{
         display: none;
     }
+    .hd_lang-menu{
+        display: flex;
+    }
+    .hn_link{
+        font-size: 36px;
+        padding-left: 40px;
+    }
+    .hn_item:nth-child(1){
+        margin: 0 0 25px 0;
+    }
+    .hn_item{
+        margin: 25px 0;
+    }
+    .hn_item-tag{
+        font-size: 18px;
+    }
+    .hd-wrapp{
+        justify-content: space-between;
+        padding: 130px 20px 20px 20px;
+    }
+    .header-nav{
+        height: min-content;
+    }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+    .hd-wrapp{
+        justify-content: space-between;
+        padding: 120px 10px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
     .logo{
         width: 130px;
     }
@@ -121,6 +365,19 @@
     .content{
         padding: 20px 0;
     }
+    .header-nav{
+        min-height: 375px;
+    }
+    .hn_link{
+        font-size: 28px;
+        padding-left: 30px;
+    }
+    .hd_lm-title, .hd_lm-option a{
+        font-size: 22px;
+    }
+    .hd_lang-menu{
+        gap: 15px;
+    }
 }
 @media screen and (max-width: 425px) {
     .book-btn svg{
@@ -129,6 +386,18 @@
     }
     .logo{
         width: 120px;
+    }
+    .hd_lm-title, .hd_lm-option a{
+        font-size: 20px;
+    }
+    .hn_item-tag{
+        font-size: 16px;
+    }
+    .hn_link{
+        font-size: 25px;
+    }
+    .hn_item{
+        margin: 20px 0;
     }
 }
 </style>

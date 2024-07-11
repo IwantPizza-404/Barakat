@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <div class="hero">
+    <section class="hero">
         <div class="container">
             <div class="hero-wrapp">
                 <div class="hero-header">
@@ -23,7 +23,7 @@
                 <div class="hero-title">here supposed to be a meaningful description</div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
  
 <style>

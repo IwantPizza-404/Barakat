@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="about-place">
+  <section class="about-place">
     <div class="container">
       <div class="ap-header">
         <h1 class="ap_title header-1">About the place</h1>
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="ap-viewpic"></div>
-  </div>
+  </section>
 </template>
  
 <style>
