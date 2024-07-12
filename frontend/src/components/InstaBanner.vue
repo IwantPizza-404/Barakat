@@ -17,15 +17,21 @@
   </template>
   
   <script>
+  import img1 from  '@/assets/images/img1.jpg'
+  import img2 from  '@/assets/images/img2.jpg'
+  import img3 from  '@/assets/images/img3.jpg'
+  import img4 from  '@/assets/images/img4.jpg'
+
+          
   export default {
     data() {
       return {
         slides: [
-          '/src/assets/images/img1.jpg',
-          '/src/assets/images/img2.jpg',
-          '/src/assets/images/img3.jpg',
-          '/src/assets/images/img1.jpg',
-          '/src/assets/images/img1.jpg',
+          img1,
+          img2,
+          img3,
+          img1,
+          img4,
         ],
       };
     },
