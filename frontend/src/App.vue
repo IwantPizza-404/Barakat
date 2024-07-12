@@ -4,6 +4,7 @@
   import AboutPlace from '@/components/AboutPlace.vue'
   import Gallery from '@/components/Gallery.vue'
   import FoodCourt from '@/components/FoodCourt.vue'
+  import InstaBanner from '@/components/InstaBanner.vue'
 
 
   export default{
@@ -13,6 +14,7 @@
       AboutPlace,
       Gallery,
       FoodCourt,
+      InstaBanner,
     }
   }
 </script>
@@ -23,6 +25,7 @@
   <AboutPlace/>
   <Gallery/>
   <FoodCourt/>
+  <InstaBanner/>
 </template>
  
 <style>
