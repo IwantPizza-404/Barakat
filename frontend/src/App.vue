@@ -5,6 +5,7 @@
   import Gallery from '@/components/Gallery.vue'
   import FoodCourt from '@/components/FoodCourt.vue'
   import InstaBanner from '@/components/InstaBanner.vue'
+  import Footer from '@/components/Footer.vue'
 
 
   export default{
@@ -15,6 +16,7 @@
       Gallery,
       FoodCourt,
       InstaBanner,
+      Footer
     }
   }
 </script>
@@ -26,6 +28,7 @@
   <Gallery/>
   <FoodCourt/>
   <InstaBanner/>
+  <Footer/>
 </template>
  
 <style>
