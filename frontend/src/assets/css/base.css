@@ -65,12 +65,14 @@ button{
   border: none;
   cursor: pointer;
   padding: 0;
+  cursor: var(--text-color);
 }
 
 input{
   max-width: 100%;
   outline: none;
   border: none;
+  border-radius: 0;
 }
 
 a{
