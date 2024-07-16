@@ -68,7 +68,11 @@
                 :key="index"
                 >
                     <span class="hn_item-tag">0{{index+1}}</span>
-                    <a class="hn_link" :href="link.link">
+                    <a 
+                        v-on="NavShow ? {click: () => ToggleNav()} : {}"
+                        class="hn_link" 
+                        :href="link.link"
+                    >
                         {{link.title}}
                     </a>
                 </li>

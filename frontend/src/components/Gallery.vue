@@ -89,14 +89,14 @@ export default {
 </script>
 
 <template>
-  <section class="main-gallery">
+  <section id="#rooms" class="main-gallery">
     <div class="container">
       <div class="mg-wrapp">
         <div class="mg-header">
           <h1 class="mg_title header-1">Your cozy</h1>
           <p class="mg_context"><b>Barakat</b> — has 18 cozy and spacious rooms with incredible panoramas that take your breath away.</p>
         </div>
-        <div id="#rooms" class="mg-slider-nav">
+        <div class="mg-slider-nav">
           <ul class="mgs-list">
             <li
               v-for="(item, index) in nav"
