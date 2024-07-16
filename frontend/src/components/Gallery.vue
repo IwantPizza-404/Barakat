@@ -3,11 +3,19 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { Autoplay, Keyboard } from 'swiper/modules';
 
-import roomImage from '@/assets/images/room-image.jpg';
+import buildingImage1 from '@/assets/images/building1.jpg';
+import buildingImage2 from '@/assets/images/building2.jpg';
+import buildingImage3 from '@/assets/images/building3.jpg';
+import buildingImage4 from '@/assets/images/building4.jpg';
+
 import roomImage1 from '@/assets/images/room-image1.jpg';
 import roomImage2 from '@/assets/images/room-image2.jpg';
+import roomImage3 from '@/assets/images/room-image3.jpg';
+import roomImage4 from '@/assets/images/room-image4.jpg';
+import roomImage5 from '@/assets/images/room-image5.jpg';
 import placeView from '@/assets/images/place-view.jpg';
-import bannerPhoto from '@/assets/images/banner-photo.jpg';
+import facilityImage1 from '@/assets/images/image234.jpg';
+import facilityImage2 from '@/assets/images/foodcort.jpg';
 
 export default {
   data() {
@@ -15,11 +23,11 @@ export default {
       nav: ['Building', 'Beachview', 'Rooms', 'Facilities', 'Restaurant'],
       slider: [
         [
-          roomImage,
-          roomImage,
-          roomImage,
-          roomImage,
-          roomImage,
+          buildingImage1,
+          buildingImage3,
+          buildingImage2,
+          buildingImage4,
+          buildingImage3,
         ],
         [
           roomImage1,
@@ -30,17 +38,17 @@ export default {
         ],
         [
           roomImage2,
-          roomImage2,
-          roomImage2,
-          roomImage2,
-          roomImage2,
+          roomImage3,
+          roomImage4,
+          roomImage5,
+          roomImage1,
         ],
         [
           placeView,
-          bannerPhoto,
-          roomImage2,
-          roomImage2,
-          roomImage2,
+          facilityImage1,
+          facilityImage2,
+          facilityImage1,
+          facilityImage2,
         ],
       ],
       activeIndex: 0,
