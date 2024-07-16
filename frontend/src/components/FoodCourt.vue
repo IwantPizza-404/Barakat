@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <section class="food-court">
+  <section id="food-court" class="food-court">
     <div class="container">
       <div class="fc-header">
         <h1 class="fc_title header-1">Food with love for you</h1>

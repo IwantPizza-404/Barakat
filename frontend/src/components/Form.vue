@@ -35,7 +35,7 @@
 </script>
 
 <template>
-    <div class="main-form">
+    <div id="contacts" class="main-form">
         <div class="container">
             <div class="mf-wrapp">
                 <div class="mf-header">
