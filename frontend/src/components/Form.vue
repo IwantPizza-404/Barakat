@@ -160,6 +160,7 @@
     }
     .mf-field{
         border-bottom: 1px solid #000;
+        border-radius: 0;
         font-family: Montserrat;
         font-size: 18px;
         padding: 12px 0;
@@ -176,6 +177,7 @@
         font-size: 20px;
         font-weight: 400;
         text-transform: uppercase;
+        color: #fff;
     }
     .state_title{
         font-size: 24px;
