@@ -67,6 +67,12 @@ button{
   padding: 0;
 }
 
+input{
+  max-width: 100%;
+  outline: none;
+  border: none;
+}
+
 a{
   text-decoration: none;
   color: var(--text-color);

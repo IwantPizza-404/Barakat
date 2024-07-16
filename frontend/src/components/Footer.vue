@@ -141,10 +141,10 @@ footer{
 }
 @media screen and (max-width: 900px) {
     .footer-logo{
-        font-size: 16.5vw;
+        font-size: 16.2vw;
     }
     .fn_list{
-        gap: 20px   ;
+        gap: 20px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -172,6 +172,9 @@ footer{
     }
     .email-block, .call-center{
         align-items: flex-start;
+    }
+    .footer-logo{
+        font-size: 15.8vw;
     }
 }
 </style>
