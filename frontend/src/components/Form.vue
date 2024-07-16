@@ -177,7 +177,7 @@
         font-size: 20px;
         font-weight: 400;
         text-transform: uppercase;
-        color: #fff;
+        color: #000;
     }
     .state_title{
         font-size: 24px;
