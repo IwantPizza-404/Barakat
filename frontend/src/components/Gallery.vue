@@ -13,6 +13,15 @@ import roomImage2 from '@/assets/images/room-image2.jpg';
 import roomImage3 from '@/assets/images/room-image3.jpg';
 import roomImage4 from '@/assets/images/room-image4.jpg';
 import roomImage5 from '@/assets/images/room-image5.jpg';
+
+import beachImage1 from '@/assets/images/beach-view1.jpg';
+import beachImage2 from '@/assets/images/beach-view2.jpg';
+import beachImage3 from '@/assets/images/beach-view3.jpg';
+import beachImage4 from '@/assets/images/beach-view4.jpg';
+import beachImage5 from '@/assets/images/beach-view5.jpg';
+
+
+
 import placeView from '@/assets/images/place-view.jpg';
 import facilityImage1 from '@/assets/images/image234.jpg';
 import facilityImage2 from '@/assets/images/foodcort.jpg';
@@ -20,7 +29,7 @@ import facilityImage2 from '@/assets/images/foodcort.jpg';
 export default {
   data() {
     return {
-      nav: ['Building', 'Beachview', 'Rooms', 'Facilities', 'Restaurant'],
+      nav: ['Building', 'Beachview', 'Rooms', 'Facilities'],
       slider: [
         [
           buildingImage1,
@@ -30,11 +39,11 @@ export default {
           buildingImage3,
         ],
         [
-          roomImage1,
-          roomImage1,
-          roomImage1,
-          roomImage1,
-          roomImage1,
+          beachImage1,
+          beachImage2,
+          beachImage3,
+          beachImage4,
+          beachImage5,
         ],
         [
           roomImage2,
@@ -97,7 +106,7 @@ export default {
 </script>
 
 <template>
-  <section id="#rooms" class="main-gallery">
+  <section id="gallery" class="main-gallery">
     <div class="container">
       <div class="mg-wrapp">
         <div class="mg-header">

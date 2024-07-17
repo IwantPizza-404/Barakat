@@ -43,7 +43,7 @@
                     <div class="header-info">
                         <div class="phone-number">
                             <div class="pn-title">Call for booking:</div>
-                            <div class="pn-text">+995 99 999 99 99</div>
+                            <a href="tel:+995557245422" class="pn-text">+995 557 245 422</a>
                         </div>
                         <div class="socials-list">
                             <a href="#" class="socials-link">Instagram</a>

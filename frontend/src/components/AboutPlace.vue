@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <section class="about-place">
+  <section id="about" class="about-place">
     <div class="container">
       <div class="ap-header">
         <h1 class="ap_title header-1">About the place</h1>

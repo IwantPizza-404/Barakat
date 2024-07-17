@@ -11,7 +11,7 @@
         <div class="footer-pannel">
             <div class="call-center">
                 <div class="fp-title">Call center:</div>
-                <a class="fp-info-text" href="tel:+995999999999">+995 99 999 99 99</a>
+                <a class="fp-info-text" href="tel:+995557245422">+995 557 245 422</a>
             </div>
             <div class="footer-nav">
                 <ul class="fn_list">

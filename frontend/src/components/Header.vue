@@ -4,10 +4,11 @@
       return{
         nav_links:[
           {title: 'Home', link: '#'},
-          {title: 'Rooms', link: '#rooms'},
+          {title: 'About', link: '#about'},
+        //   {title: 'Rooms', link: '#rooms'},
           {title:'Foodcourt', link: '#food-court'},
+          {title: 'Gallery', link: '#gallery'},
           {title: 'Contacts', link: '#contacts'},
-          {title: 'Location', link: '#'},
         ],
         NavShow: false,
       }
@@ -331,7 +332,7 @@ header{
     .hn_item:nth-child(1){
         margin: 0 0 25px 0;
     }
-    .hn_item{
+    .hn_item,.hn_item:nth-child(4){
         margin: 25px 0;
     }
     .hn_item-tag{
