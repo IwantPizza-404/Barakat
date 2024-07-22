@@ -29,7 +29,7 @@ import facilityImage2 from '@/assets/images/foodcort.jpg';
 export default {
   data() {
     return {
-      nav: ['Building', 'Beachview', 'Rooms', 'Facilities'],
+      nav: ['building', 'beachview', 'rooms', 'facilities'],
       slider: [
         [
           buildingImage1,
@@ -110,8 +110,8 @@ export default {
     <div class="container">
       <div class="mg-wrapp">
         <div class="mg-header">
-          <h1 class="mg_title header-1">Captured Moments</h1>
-          <p class="mg_context">Our gallery showcases the stunning beauty of Barakat, highlighting the unforgettable experiences and breathtaking views that await you.</p>
+          <h1 class="mg_title header-1">{{ $t('captured_moments') }}</h1>
+          <p class="mg_context">{{ $t('gallery_description') }}</p>
         </div>
         <div class="mg-slider-nav">
           <ul class="mgs-list">
@@ -121,7 +121,7 @@ export default {
               :class="{ 'mgsn-option': true, 'active': activeIndex === index }"
               @click="setActive(index)"
             >
-              {{ item }}
+              {{ $t(item) }}
             </li>
             <div class="mgsn-line" :style="lineStyle"></div>
           </ul>

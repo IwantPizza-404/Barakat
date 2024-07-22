@@ -10,22 +10,22 @@
         <h1 class="footer-logo">Barakat</h1>
         <div class="footer-pannel">
             <div class="call-center">
-                <div class="fp-title">Call center:</div>
+                <div class="fp-title">{{ $t('call_center') }}:</div>
                 <a class="fp-info-text" href="tel:+995557245422">+995 557 245 422</a>
             </div>
             <div class="footer-nav">
                 <ul class="fn_list">
                     <li class="fn-link">
-                        <a href="#">Home</a>
+                        <a href="#">{{ $t('home') }}</a>
                     </li>
                     <li class="fn-link">
-                        <a href="#">About</a>
+                        <a href="#">{{ $t('foodcourt') }}</a>
                     </li>
                     <li class="fn-link">
-                        <a href="#">Rooms</a>
+                        <a href="#">{{ $t('rooms') }}</a>
                     </li>
                     <li class="fn-link">
-                        <a href="#">Contacts</a>
+                        <a href="#">{{ $t('contacts') }}</a>
                     </li>
                 </ul>
                 <div class="socials-list">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="email-block">
-                <div class="fp-title">For all questions:</div>
+                <div class="fp-title">{{ $t('for_all_questions')}}:</div>
                 <a class="fp-info-text" href="mailto:barakat@info.com">barakat@info.com</a>
             </div>
         </div>

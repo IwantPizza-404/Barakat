@@ -42,7 +42,7 @@
                     <h1 class="mf_title">Contact us!</h1>
                     <div class="header-info">
                         <div class="phone-number">
-                            <div class="pn-title">Call for booking:</div>
+                            <div class="pn-title">{{ $t('call_for_booking') }}:</div>
                             <a href="tel:+995557245422" class="pn-text">+995 557 245 422</a>
                         </div>
                         <div class="socials-list">
@@ -59,7 +59,7 @@
                     <div class="mf-fields">
                         <input 
                             v-model="name"
-                            placeholder="Full Name" 
+                            :placeholder="$t('full_name')" 
                             type="text" 
                             name="name"
                             class="mf-field"
@@ -67,7 +67,7 @@
                         >
                         <input
                             v-model="number" 
-                            placeholder="Phone Number" 
+                            :placeholder="$t('phone_number')" 
                             type="tel" 
                             name="phone" 
                             class="mf-field"
@@ -75,7 +75,7 @@
                         >
                     </div>
                     <button type="submit" class="mf-send-btn">
-                        <span>Send</span>
+                        <span>{{ $t('send') }}</span>
                         <svg width="70" height="55" viewBox="0 0 70 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="42.5" cy="27.5" r="27" stroke="black"/>
                             <path d="M40.5303 28.5303C40.8232 28.2374 40.8232 27.7626 40.5303 27.4697L35.7574 22.6967C35.4645 22.4038 34.9896 22.4038 34.6967 22.6967C34.4038 22.9896 34.4038 23.4645 34.6967 23.7574L38.9393 28L34.6967 32.2426C34.4038 32.5355 34.4038 33.0104 34.6967 33.3033C34.9896 33.5962 35.4645 33.5962 35.7574 33.3033L40.5303 28.5303ZM6.55671e-08 28.75L40 28.75L40 27.25L-6.55671e-08 27.25L6.55671e-08 28.75Z" fill="black"/>

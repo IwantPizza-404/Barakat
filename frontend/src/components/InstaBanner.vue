@@ -2,7 +2,7 @@
     <section class="insta-banner">
       <div class="ib-wrapp">
         <h1 class="ib-title">
-            <span class="ib_cap">FOLLOW US AT @barakat.gr</span>
+            <span class="ib_cap">{{ $t('follow_us_at')}} @barakat.gr</span>
             <span class="ib_title">Instagram</span>
         </h1>
         <div class="ib-slider">

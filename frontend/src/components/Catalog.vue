@@ -48,8 +48,8 @@ export default {
     <div class="container">
       <div class="rc-wrapp">
         <div class="rc-header">
-          <h1 class="rc_title header-1">Your cozy</h1>
-          <p class="rc_context"><b>Barakat</b> — has 18 cozy and spacious rooms with incredible panoramas that take your breath away.</p>
+          <h1 class="rc_title header-1">{{ $t('your_cozy') }}</h1>
+          <p class="rc_context"><b>{{ $t('Barakat') }}</b> — {{ $t('cozy_rooms_description') }}</p>
         </div>
         <div class="rc-catalog">
             <a v-for="(room, index) in rooms" :key="index" href="https://www.booking.com/Share-qXK2KL" class="rc-catalog_item">

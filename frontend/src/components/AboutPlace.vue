@@ -7,8 +7,8 @@
   <section id="about" class="about-place">
     <div class="container">
       <div class="ap-header">
-        <h1 class="ap_title header-1">About the place</h1>
-        <p class="ap_context">Hotel <b>BARAKAT</b> is located in a magical corner of nature, near by picturesque beach and mountains. Here you are you can enjoy fresh mountain air and incredible views right from the window of your room.</p>
+        <h1 class="ap_title header-1">{{ $t('about_the_place') }}</h1>
+        <p class="ap_context">{{ $t('hotel') }} <b>{{ $t('Barakat') }}</b> {{ $t('hotel_description') }}</p>
       </div>
     </div>
     <div class="ap-viewpic"></div>

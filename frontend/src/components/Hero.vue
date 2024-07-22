@@ -8,8 +8,8 @@
         <div class="container">
             <div class="hero-wrapp">
                 <div class="hero-header">
-                    <h1>Barakat</h1>
-                    <h2>hotel complex</h2>
+                    <h1>{{ $t('Barakat') }}</h1>
+                    <h2>{{ $t('hotelComplex') }}</h2>
                 </div>
                 <div class="hero-pic-1">
                     <img src="/src/assets/images/banner-photo2.jpg">
@@ -20,7 +20,7 @@
                 <div class="hero-pic-2">
                     <img src="/src/assets/images/banner-photo.jpg">
                 </div>
-                <div class="hero-title">here supposed to be a meaningful description</div>
+                <div class="hero-title">{{ $t('heroTitle') }}</div>
             </div>
         </div>
     </section>

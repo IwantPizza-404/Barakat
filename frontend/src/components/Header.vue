@@ -1,95 +1,105 @@
 <script>
-  export default{
-    data(){
-      return{
-        nav_links:[
-          {title: 'Home', link: '#'},
-        //   {title: 'About', link: '#about'},
-          {title: 'Rooms', link: '#catalog'},
-          {title:'Foodcourt', link: '#food-court'},
-          {title: 'Gallery', link: '#gallery'},
-          {title: 'Contacts', link: '#contacts'},
+  export default {
+    data() {
+      return {
+        nav_links: [
+          { title: 'home', link: '#' },
+          { title: 'rooms', link: '#catalog' },
+          { title: 'foodcourt', link: '#food-court' },
+          { title: 'gallery', link: '#gallery' },
+          { title: 'contacts', link: '#contacts' },
         ],
         NavShow: false,
-      }
+      };
     },
-    methods:{
-      ToggleNav(){
-        this.NavShow =! this.NavShow
-        window.scrollTo(0,0)
-        if(this.NavShow == true)
-          document.body.classList.add('lock')
-        else
-          document.body.classList.remove('lock')
-      }
-    }
-  }
+    methods: {
+      ToggleNav() {
+        this.NavShow = !this.NavShow;
+        window.scrollTo(0, 0);
+        if (this.NavShow == true) {
+          document.body.classList.add('lock');
+        } else {
+          document.body.classList.remove('lock');
+        }
+      },
+      changeLanguage(lang) {
+        this.$i18n.locale = lang;
+        localStorage.setItem('selectedLanguage', lang);
+      },
+    },
+  };
 </script>
 
 <template>
   <header>
     <div class="container">
-        <div class="content">
-            <div class="left-pannel">
-                <transition name="fade" mode="out-in">
-                    <div @click="ToggleNav()" class="nav-btn" v-if="NavShow">
-                        Close
-                    </div>
-                    <div @click="ToggleNav()" class="nav-btn" v-else>
-                        Menu
-                    </div>
-                </transition>
-                <ul class="lang-menu">
-                    <li class="lang-option active">EN</li>
-                    <li class="lang-option">GE</li>
-                </ul>
+      <div class="content">
+        <div class="left-pannel">
+          <transition name="fade" mode="out-in">
+            <div @click="ToggleNav()" class="nav-btn" v-if="NavShow">
+              Close
             </div>
-            <div class="logo">
-                <a href="#">
-                    <img src="/src/assets/images/logo.svg">
-                </a>
+            <div @click="ToggleNav()" class="nav-btn" v-else>
+              Menu
             </div>
-            <div class="book-btn">
-                <a href="#">
-                    <span>Book</span>
-                    <svg width="40" height="31" viewBox="0 0 40 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="25" cy="15.5" r="14.5" stroke="black"/>
-                        <path d="M25.3536 15.8536C25.5488 15.6583 25.5488 15.3417 25.3536 15.1464L22.1716 11.9645C21.9763 11.7692 21.6597 11.7692 21.4645 11.9645C21.2692 12.1597 21.2692 12.4763 21.4645 12.6716L24.2929 15.5L21.4645 18.3284C21.2692 18.5237 21.2692 18.8403 21.4645 19.0355C21.6597 19.2308 21.9763 19.2308 22.1716 19.0355L25.3536 15.8536ZM0 16H25V15H0V16Z" fill="black"/>
-                    </svg>
-                </a>
-            </div>
+          </transition>
+          <ul class="lang-menu">
+            <li 
+              @click="changeLanguage('en')" 
+              :class="{ 'lang-option': true, 'active': $i18n.locale === 'en' }"
+            >EN</li>
+            <li 
+              @click="changeLanguage('ge')" 
+              :class="{ 'lang-option': true, 'active': $i18n.locale === 'ge' }"
+            >GE</li>
+          </ul>
         </div>
+        <div class="logo">
+          <a href="#">
+            <img src="/src/assets/images/logo.svg">
+          </a>
+        </div>
+        <div class="book-btn">
+          <a href="#">
+            <span>Book</span>
+            <svg width="40" height="31" viewBox="0 0 40 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="15.5" r="14.5" stroke="black"/>
+              <path d="M25.3536 15.8536C25.5488 15.6583 25.5488 15.3417 25.3536 15.1464L22.1716 11.9645C21.9763 11.7692 21.6597 11.7692 21.4645 11.9645C21.2692 12.1597 21.2692 12.4763 21.4645 12.6716L24.2929 15.5L21.4645 18.3284C21.2692 18.5237 21.2692 18.8403 21.4645 19.0355C21.6597 19.2308 21.9763 19.2308 22.1716 19.0355L25.3536 15.8536ZM0 16H25V15H0V16Z" fill="black"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
     <div :class="{'header-drop': true, 'hd-open': NavShow}">
-        <div class="hd-wrapp">
-            <ul class="header-nav">
-                <li 
-                v-for="(link, index) in this.nav_links" 
-                class="hn_item"
-                :key="index"
-                >
-                    <span class="hn_item-tag">0{{index+1}}</span>
-                    <a 
-                        v-on="NavShow ? {click: () => ToggleNav()} : {}"
-                        class="hn_link" 
-                        :href="link.link"
-                    >
-                        {{link.title}}
-                    </a>
-                </li>
-            </ul>
-            <div class="hd_lang-menu">
-                <div class="hd_lm-title">Language:</div>
-                <ul class="hd_lm-list">
-                    <li class="hd_lm-option active">
-                        <a href="#">EN</a>
-                    </li>
-                    <li class="hd_lm-option">
-                        <a href="#">GE</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="hd-wrapp">
+        <ul class="header-nav">
+          <li 
+            v-for="(link, index) in nav_links" 
+            class="hn_item"
+            :key="index"
+          >
+            <span class="hn_item-tag">0{{index + 1}}</span>
+            <a 
+              v-on="NavShow ? {click: () => ToggleNav()} : {}"
+              class="hn_link" 
+              :href="link.link"
+            >
+              {{ $t(link.title) }}
+            </a>
+          </li>
+        </ul>
+        <div class="hd_lang-menu">
+          <div class="hd_lm-title">Language:</div>
+          <ul class="hd_lm-list">
+            <li :class="{ 'hd_lm-option': true, 'active': $i18n.locale === 'en' }">
+              <a href="#" @click.prevent="changeLanguage('en')">EN</a>
+            </li>
+            <li :class="{ 'hd_lm-option': true, 'active': $i18n.locale === 'ge' }">
+              <a href="#" @click.prevent="changeLanguage('ge')">GE</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
   </header>
 </template>
