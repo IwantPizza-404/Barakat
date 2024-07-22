@@ -4,8 +4,8 @@
       return{
         nav_links:[
           {title: 'Home', link: '#'},
-          {title: 'About', link: '#about'},
-        //   {title: 'Rooms', link: '#rooms'},
+        //   {title: 'About', link: '#about'},
+          {title: 'Rooms', link: '#catalog'},
           {title:'Foodcourt', link: '#food-court'},
           {title: 'Gallery', link: '#gallery'},
           {title: 'Contacts', link: '#contacts'},

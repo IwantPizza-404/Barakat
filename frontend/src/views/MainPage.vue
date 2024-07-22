@@ -5,6 +5,7 @@
   import FoodCourt from '@/components/FoodCourt.vue'
   import InstaBanner from '@/components/InstaBanner.vue'
   import Form from '@/components/Form.vue'
+  import Catalog from '@/components/Catalog.vue'
 
   export default{
     components:{
@@ -14,6 +15,7 @@
       FoodCourt,
       InstaBanner,
       Form,
+      Catalog,
     }
   }
 </script>
@@ -23,6 +25,7 @@
   <AboutPlace/>
   <Gallery/>
   <FoodCourt/>
+  <Catalog/>
   <InstaBanner/>
   <Form/>
 </template>

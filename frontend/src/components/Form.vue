@@ -21,7 +21,7 @@
                     sessionStorage.setItem('IsMessaged', 'true');
                     this.IsMessaged = true;
                     console.log("Messaged!")
-                } 
+                }
                 else {
                     console.error('Error submitting message:', response.statusText);
                 }

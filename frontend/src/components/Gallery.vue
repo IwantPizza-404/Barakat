@@ -110,8 +110,8 @@ export default {
     <div class="container">
       <div class="mg-wrapp">
         <div class="mg-header">
-          <h1 class="mg_title header-1">Your cozy</h1>
-          <p class="mg_context"><b>Barakat</b> — has 18 cozy and spacious rooms with incredible panoramas that take your breath away.</p>
+          <h1 class="mg_title header-1">Captured Moments</h1>
+          <p class="mg_context">Our gallery showcases the stunning beauty of Barakat, highlighting the unforgettable experiences and breathtaking views that await you.</p>
         </div>
         <div class="mg-slider-nav">
           <ul class="mgs-list">
@@ -176,16 +176,12 @@ export default {
   gap: 20px;
 }
 .mg_title{
-  text-align: end;
+  text-align: center;
 }
 .mg_context{
   font-size: var(--text-size);
   font-weight: 400;
   text-align: center;
-}
-.mg_context b{
-  text-decoration: underline;
-  text-transform: uppercase;
 }
 .mg-slider-nav{
   display: flex;
