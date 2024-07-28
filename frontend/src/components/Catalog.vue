@@ -50,6 +50,10 @@ export default {
         <div class="rc-header">
           <h1 class="rc_title header-1">{{ $t('your_cozy') }}</h1>
           <p class="rc_context"><b>{{ $t('Barakat') }}</b> — {{ $t('cozy_rooms_description') }}</p>
+          <p class="rc_context">{{ $t('hotel_description2') }}</p>
+          <p class="rc_context">{{ $t('hotel_description3') }}</p>
+          <p class="rc_context">{{ $t('hotel_description4') }}</p>
+          <p class="rc_context">{{ $t('hotel_description5') }}</p>
         </div>
         <div class="rc-catalog">
             <a v-for="(room, index) in rooms" :key="index" href="https://www.booking.com/Share-qXK2KL" class="rc-catalog_item">
@@ -101,7 +105,7 @@ export default {
   font-size: var(--text-size);
   font-weight: 400;
   text-align: start;
-  max-width: 700px;
+  /* max-width: 700px; */
 }
 .rc_context b{
   text-decoration: underline;

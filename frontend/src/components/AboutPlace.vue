@@ -8,7 +8,7 @@
     <div class="container">
       <div class="ap-header">
         <h1 class="ap_title header-1">{{ $t('about_the_place') }}</h1>
-        <p class="ap_context">{{ $t('hotel') }} <b>{{ $t('Barakat') }}</b> {{ $t('hotel_description') }}</p>
+        <p class="ap_context">{{ $t('hotel') }} <b>{{ $t('Barakat') }}</b> {{ $t('hotel_description1') }}</p>
       </div>
     </div>
     <div class="ap-viewpic"></div>

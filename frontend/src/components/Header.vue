@@ -1,4 +1,5 @@
 <script>
+  import BookingModal from '@/components/BookingModal.vue'
   export default {
     data() {
       return {
@@ -10,6 +11,7 @@
           { title: 'contacts', link: '#contacts' },
         ],
         NavShow: false,
+        showBmodal: false,
       };
     },
     methods: {
@@ -26,7 +28,13 @@
         this.$i18n.locale = lang;
         localStorage.setItem('selectedLanguage', lang);
       },
+      toggleBmodal(){
+        this.showBmodal = !this.showBmodal
+      }
     },
+    components:{
+      BookingModal
+    }
   };
 </script>
 
@@ -59,14 +67,12 @@
             <img src="/src/assets/images/logo.svg">
           </a>
         </div>
-        <div class="book-btn">
-          <a href="#">
-            <span>Book</span>
-            <svg width="40" height="31" viewBox="0 0 40 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="25" cy="15.5" r="14.5" stroke="black"/>
-              <path d="M25.3536 15.8536C25.5488 15.6583 25.5488 15.3417 25.3536 15.1464L22.1716 11.9645C21.9763 11.7692 21.6597 11.7692 21.4645 11.9645C21.2692 12.1597 21.2692 12.4763 21.4645 12.6716L24.2929 15.5L21.4645 18.3284C21.2692 18.5237 21.2692 18.8403 21.4645 19.0355C21.6597 19.2308 21.9763 19.2308 22.1716 19.0355L25.3536 15.8536ZM0 16H25V15H0V16Z" fill="black"/>
-            </svg>
-          </a>
+        <div @click="toggleBmodal" class="book-btn">
+          <span>Book</span>
+          <svg width="40" height="31" viewBox="0 0 40 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="15.5" r="14.5" stroke="black"/>
+            <path d="M25.3536 15.8536C25.5488 15.6583 25.5488 15.3417 25.3536 15.1464L22.1716 11.9645C21.9763 11.7692 21.6597 11.7692 21.4645 11.9645C21.2692 12.1597 21.2692 12.4763 21.4645 12.6716L24.2929 15.5L21.4645 18.3284C21.2692 18.5237 21.2692 18.8403 21.4645 19.0355C21.6597 19.2308 21.9763 19.2308 22.1716 19.0355L25.3536 15.8536ZM0 16H25V15H0V16Z" fill="black"/>
+          </svg>
         </div>
       </div>
     </div>
@@ -102,6 +108,11 @@
       </div>
     </div>
   </header>
+  <BookingModal
+    ref="Bmodal"
+    :showBmodal="showBmodal"
+    :toggleBmodal="toggleBmodal"
+  />
 </template>
 
 <style scoped>
@@ -153,16 +164,14 @@ header{
 .logo a{
     display: flex;
 }
-.book-btn a{
+.book-btn{
     display: flex;
     align-items: center;
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
     gap: 5px;
-}
-.book-btn{
-    display: flex;
+    cursor: pointer;
 }
 
 .header-drop{
@@ -306,7 +315,7 @@ header{
 }
 
 @media screen and (max-width: 1440px) {
-    .nav-btn, .lang-option, .book-btn a{
+    .nav-btn, .lang-option, .book-btn{
         font-size: 19px;
     }
     .book-btn svg{
@@ -367,10 +376,10 @@ header{
     .logo{
         width: 130px;
     }
-    .nav-btn, .lang-option, .book-btn a{
+    .nav-btn, .lang-option, .book-btn{
         font-size: 17px;
     }
-    .book-btn a{
+    .book-btn{
         gap: 2px;
     }
     .book-btn svg{

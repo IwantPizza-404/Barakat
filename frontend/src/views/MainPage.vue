@@ -16,7 +16,7 @@
       InstaBanner,
       Form,
       Catalog,
-    }
+    },
   }
 </script>
 
