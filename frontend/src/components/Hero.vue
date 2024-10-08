@@ -47,7 +47,7 @@
     display: flex;
     gap: 20px;
     align-items: flex-end;
-    max-height: 70vh;
+    max-height: 70dvh;
     margin-bottom: 70px;
     min-height: 455px
 }
@@ -229,8 +229,8 @@
         transform: translateX(-50%);
     }
     .hero-wrapp{
-        max-height: 78vh;
-        height: 78vh;
+        max-height: 78dvh;
+        height: 78dvh;
     }
     .hero-title{
         font-size: 16px;
