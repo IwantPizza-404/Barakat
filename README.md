@@ -1,1 +1,1 @@
-DM - https://barakat.com.ge
+Link - https://barakat.com.ge
